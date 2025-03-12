@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ApiService } from '../../services/api.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ import { ApiService } from '../../services/api.service';
 export class LoginComponent {
 
   loginForm:FormGroup;
-  constructor(private fb: FormBuilder,private api:ApiService) {
+  constructor(private fb: FormBuilder,private auth:AuthService) {
     this.loginForm = this.fb.group({
       username: ['', Validators.required],
       password: ['', Validators.required]
@@ -20,12 +21,10 @@ export class LoginComponent {
 
   onSubmit() {
     if (this.loginForm.valid) {
-      this.api.login(this.loginForm.value).subscribe(
-        response => {
-          console.log(response);
-        },
-        error=>{
-          alert("invalid");
+      this.auth.login(this.loginForm.value).subscribe(
+        {
+          next:(response)=>console.log(response),
+          error:(err)=>alert("invalid creds !")
         }
       )
     }
