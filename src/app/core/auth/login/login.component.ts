@@ -26,6 +26,7 @@ export class LoginComponent {
         {
           next:(response)=>{
             this.auth.saveToken(response.token);
+            console.log(response.token);
             this.router.navigate(['/feed']);
           },
           error:(err)=>alert("invalid creds !")
