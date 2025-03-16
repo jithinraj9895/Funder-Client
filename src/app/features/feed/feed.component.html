@@ -1,12 +1,16 @@
-<p>feed works!</p>
+<p class="feed-title">Feed Works!</p>
 
-<div *ngIf="ideas.length > 0;">
+<div *ngIf="ideas.length > 0;" class="feed-container">
     <div *ngFor="let idea of ideas" class="idea-card">
-      <h3>{{ idea.title }}</h3>
-      <p>{{ idea.description }}</p>
-      <small>
-        <strong>Approvals:</strong> {{ idea.approvals }} | 
-        <strong>Disapprovals:</strong> {{ idea.disapprovals }}
-      </small>
+        <h3>{{ idea.title }}</h3>
+        <p class="idea-description">{{ idea.description }}</p>
+        <p class="idea-stats">
+            <span>👍 {{ idea.approvals }}</span> | 
+            <span>👎 {{ idea.disapprovals }}</span>
+        </p>
+        <div class="vote-buttons">
+            <button class="approve-btn" (click)="vote(idea.id, 'approve')">👍 Approve</button>
+            <button class="disapprove-btn" (click)="vote(idea.id, 'disapprove')">👎 Disapprove</button>
+        </div>
     </div>
 </div>

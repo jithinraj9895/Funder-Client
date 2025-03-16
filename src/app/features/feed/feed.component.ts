@@ -25,4 +25,8 @@ export class FeedComponent {
     })
   }
 
+
+  vote(ideaId: number, type: 'approve' | 'disapprove') {
+    console.log("voting");
+  }
 }

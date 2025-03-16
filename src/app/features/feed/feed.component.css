@@ -1,0 +1,73 @@
+.feed-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .feed-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .idea-card {
+    background: #f3e8e8;
+    padding: 15px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .idea-card:hover {
+    transform: translateY(-3px);
+  }
+  
+  .idea-description {
+    color: #555;
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  
+  .idea-stats {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .vote-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .approve-btn {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .approve-btn:hover {
+    background-color: #45a049;
+  }
+  
+  .disapprove-btn {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .disapprove-btn:hover {
+    background-color: #d32f2f;
+  }
+  
