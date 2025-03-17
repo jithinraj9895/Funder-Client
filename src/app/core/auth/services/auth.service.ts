@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Route, Router } from '@angular/router';
+import { jwtDecode } from 'jwt-decode';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -27,5 +28,18 @@ export class AuthService {
     logout(){
       localStorage.removeItem('token');
       this.router.navigate(['\login']);
+    }
+
+    getUserId(): number | null {
+      const token = this.getToken();
+      if (!token) return null;
+  
+      try {
+        const decodedToken: any = jwtDecode(token);
+        return decodedToken.user_id || null;
+      } catch (error) {
+        console.error('Invalid token:', error);
+        return null;
+      }
     }
 }
