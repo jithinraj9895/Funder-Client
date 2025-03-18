@@ -12,7 +12,6 @@ import { AuthService } from '../../core/auth/services/auth.service';
 export class FeedComponent {
 
   public ideas: any[] = [];
-  private clickedOnce :number = 0;
 
   constructor(private apiService: ApiService,private authService:AuthService){}
 
@@ -44,21 +43,26 @@ export class FeedComponent {
 
           // Update the local counts immediately for real-time feedback
           if (voteType === 'AGREE') {
-            if(this.clickedOnce%2 === 0)
+            if(res === 'vote added'){
               this.ideas[ideaIndex].approvals += 1;
-            else
+            }
+            else{
               this.ideas[ideaIndex].approvals -= 1;
-            this.clickedOnce++;
+            }
           }
           
           if (voteType === 'DISAGREE') {
-            this.ideas[ideaIndex].disapprovals += 1;
+            if(res === 'vote added')
+              this.ideas[ideaIndex].disapprovals += 1;
+            else
+              this.ideas[ideaIndex].disapprovals -= 1;
           }
 
           this.ideas = [...this.ideas];
         }
       },
       error:(err)=>{
+        console.log(err);
       }
     })
   }
