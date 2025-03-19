@@ -1,0 +1,10 @@
+ul{
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+  
+  ul li a:hover {
+    background-color: antiquewhite;
+  }
+  

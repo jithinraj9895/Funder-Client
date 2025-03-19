@@ -16,7 +16,7 @@ export class FeedComponent {
   constructor(private apiService: ApiService,private authService:AuthService){}
 
   ngOnInit(){
-    this.apiService.getIdeas().subscribe({
+    this.apiService.getIdeas("ideas").subscribe({
       next:(response)=>{
         this.ideas = response;
       },

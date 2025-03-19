@@ -12,8 +12,8 @@ export class ApiService {
 
   constructor(private http:HttpClient) { }
 
-  getIdeas(): Observable<any> {
-    return this.http.get(this.apiUrl+"ideas").pipe(
+  getIdeas(endpoint:string): Observable<any> {
+    return this.http.get(this.apiUrl+endpoint).pipe(
       catchError((error) => {
         console.error("Error fetching ideas:", error);
         return throwError(() => new Error("Failed to fetch ideas"));
