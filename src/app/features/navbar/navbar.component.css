@@ -1,10 +1,10 @@
-ul{
-    display: flex;
-    gap: 40px;
-    justify-content: center;
+.navbar-nav .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.195); /* Light white hover effect */
+  width: 100%;
+  color: rgb(255, 255, 255);
 }
-  
-  ul li a:hover {
-    background-color: antiquewhite;
-  }
-  
+
+
+.navbar-nav .nav-link {
+  cursor: pointer; /* Ensures pointer cursor on hover */
+}

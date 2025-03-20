@@ -7,7 +7,7 @@ import { GlobalFeedComponent } from './features/global-feed/global-feed.componen
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,NavbarComponent,GlobalFeedComponent],
+  imports: [RouterOutlet,NavbarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

@@ -1,0 +1,24 @@
+.ideas-container {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column; /* Stack boxes vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically (if needed) */
+    min-height: 100vh; /* Full screen height */
+  }
+  
+  .idea-box {
+    background-color: #d6e5f6; /* Light background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%; /* Adjust width */
+    text-align: center;
+    margin: 10px 0; /* Space between boxes */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .idea-box:hover {
+    transform: scale(1.05); /* Small hover effect */
+  }
+  

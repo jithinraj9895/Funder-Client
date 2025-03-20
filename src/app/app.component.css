@@ -1,0 +1,14 @@
+.footer {
+    position: fixed;
+    background-color: #f7f7f7; /* Dark background */
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 6px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .footer p {
+    margin: 0;
+    color: #262723;
+  }
+  

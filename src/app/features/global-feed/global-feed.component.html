@@ -1,5 +1,7 @@
-<h1>Global</h1>
-<div *ngFor="let idea of ideas">
-        <h3>{{ idea[1] }}</h3>
-        <p>{{ idea[2] }}<p>
+<div class="ideas-container">
+        <div *ngFor="let idea of ideas" class="idea-box">
+          <h3>{{ idea[1] }}</h3>
+          <p>{{ idea[2] }}</p>
+        </div>
 </div>
+      
