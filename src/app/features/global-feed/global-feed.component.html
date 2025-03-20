@@ -1,7 +1,12 @@
 <div class="ideas-container">
-        <div *ngFor="let idea of ideas" class="idea-box">
-          <h3>{{ idea[1] }}</h3>
-          <p>{{ idea[2] }}</p>
+        <div *ngFor="let idea of ideas; let i = index" class="idea-box">
+                <div class="idea-numbers">
+                        {{i+1}}
+                </div>
+                <div class="idea-details">
+                        <h3>{{ idea[1] }}</h3>
+                        <p>{{ idea[2] }}</p>
+                </div>
         </div>
 </div>
       
