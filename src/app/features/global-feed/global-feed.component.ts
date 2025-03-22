@@ -17,10 +17,9 @@ export class GlobalFeedComponent {
     this.apiService.getIdeas("best").subscribe({
       next:(response)=>{
         this.ideas = response;
-        console.log(response);
       },
       error:(err)=>{
-        "errrrprr";
+        "errrrorr";
       }
     })
   }

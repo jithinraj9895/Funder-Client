@@ -5,10 +5,9 @@ import { AuthService } from '../auth/services/auth.service';
 export const authInterceptor: HttpInterceptorFn = (req, next) => {
   const authService = inject(AuthService);
 
-  if (req.url.includes('/login')) {
+  if (req.url.includes('/login') || req.url.includes('/best')) {
     return next(req); // Skip token attachment
   }
-
 
   const token = authService.getToken();
 

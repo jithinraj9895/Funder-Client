@@ -42,4 +42,22 @@ export class AuthService {
         return null;
       }
     }
+
+    getUserName(): string{
+      const token = this.getToken();
+      console.log(token);
+      if (!token) return "";
+  
+      try {
+        const decodedToken: any = jwtDecode(token);
+        return decodedToken.sub || "";
+      } catch (error) {
+        console.error('Invalid token:', error);
+        return "";
+      }
+    }
+
+    checkLoginStatus(): boolean {
+      return !!this.getToken();
+    }
 }

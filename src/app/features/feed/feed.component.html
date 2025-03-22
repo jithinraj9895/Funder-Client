@@ -1,4 +1,16 @@
 
+<div class="post-container">
+    <form [formGroup]="form" (ngSubmit)="onIdeaSubmit()">
+      <div  class="form-container">
+        <input id="title" formControlName="title" placeholder="Title"/>
+        <textarea id="description" formControlName="description" placeholder="Description" required></textarea>
+        <button class="idea-button" type="submit" [disabled]="form.invalid">{{ideaPostBtnTxt}}</button>
+        <p></p>
+      </div>
+    </form>
+  </div>
+
+
 <div *ngIf="ideas.length > 0;" class="feed-container">
     <div *ngFor="let idea of ideas" class="idea-card">
         <h5>{{ idea.title }}</h5>

@@ -21,16 +21,28 @@
             <i class="bi bi-newspaper"></i> Feed
           </a>
         </li>
-        <li class="nav-item flex-fill text-center">
+        <li class="nav-item flex-fill text-center" *ngIf="!authService.checkLoginStatus()">
           <a class="nav-link" routerLink="/login" routerLinkActive="active-link">
             <i class="bi bi-box-arrow-in-right"></i> Login
           </a>
         </li>
-        <li class="nav-item flex-fill text-center">
+        <li class="nav-item flex-fill text-center" *ngIf="!authService.checkLoginStatus()">
           <a class="nav-link" routerLink="/signup" routerLinkActive="active-link">
             <i class="bi bi-person-plus"></i> Signup
           </a>
         </li>
+        <li class="nav-item flex-fill text-center" *ngIf="authService.checkLoginStatus()">
+          <a class="nav-link" (click)="logout()">
+            <i class="bi bi-box-arrow-in-right"></i> Logout
+          </a>
+        </li>
+
+        <li class="nav-item flex-fill text-center" *ngIf="authService.checkLoginStatus()">
+          <a class="nav-link">
+            <i class="bi bi-person"></i> {{username}}
+          </a>
+        </li>
+
       </ul>
     </div>
   </div>

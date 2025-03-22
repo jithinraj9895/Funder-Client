@@ -11,7 +11,6 @@ import { Router } from '@angular/router';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-
   loginForm:FormGroup;
   constructor(private fb: FormBuilder,private auth:AuthService,private router:Router) {
     this.loginForm = this.fb.group({

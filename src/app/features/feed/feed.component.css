@@ -1,3 +1,24 @@
+.post-container,form,input,textarea,.idea-button{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+
+}
+
+
+
+.form-container{
+  background: #76d2de;
+  padding: 15px;
+  width: 90%;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .feed-title {
     text-align: center;
     font-size: 1.5rem;
@@ -7,7 +28,6 @@
   }
   
   .feed-container {
-    padding-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,7 +64,7 @@
     margin-top: 10px;
   }
   
-  button {
+  .approve-btn,.disapprove-btn {
     padding: 8px 12px;
     border: none;
     border-radius: 5px;
