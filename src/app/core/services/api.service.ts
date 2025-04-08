@@ -9,7 +9,7 @@ import { Idea } from '../../models/idea';
 })
 export class ApiService {
 
-  private apiUrl = "http://localhost:8080/";
+  private apiUrl = "http://localhost:5264/";
 
   constructor(private http:HttpClient) { }
 

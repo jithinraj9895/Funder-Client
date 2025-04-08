@@ -30,6 +30,7 @@ export class FeedComponent {
   loadIdeas(){
     this.apiService.getIdeas("ideas").subscribe({
       next:(response)=>{
+        console.log(response);
         this.ideas = response;
       },
       error:(err)=>{

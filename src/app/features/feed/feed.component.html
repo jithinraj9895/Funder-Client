@@ -14,7 +14,7 @@
 <div *ngIf="ideas.length > 0;" class="feed-container">
     <div *ngFor="let idea of ideas" class="idea-card">
         <h5>{{ idea.title }}</h5>
-        <h6>Posted by {{idea.user.username}}</h6>
+        <h6>Posted by {{idea.userId}}</h6>
         <p class="idea-description">{{ idea.description }}</p>
         <p class="idea-stats">
             <span>👍 {{ idea.approvals }}</span> | 

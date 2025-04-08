@@ -16,6 +16,7 @@ export class GlobalFeedComponent {
   ngOnInit(){
     this.apiService.getIdeas("best").subscribe({
       next:(response)=>{
+        console.log(response);
         this.ideas = response;
       },
       error:(err)=>{
